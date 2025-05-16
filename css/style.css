@@ -1,46 +1,101 @@
-body {
-    display: flex;    
+.flex-container {
+    display: flex;
     flex-direction: column;
     background-color: #b1b5be;    
     text-align: center;    
     align-items: center;
+    justify-content: center;
     color: white;
-    margin: 10%;
+    margin: 10px;
     padding: 10px;
-
 }
 
-header, aside, footer {
+.flex-header, .flex-footer, .flex-aside {
     width: 90%;
     padding: 10px;
-    margin: 10px 10px;
-    border-radius: 10px;
-}
-
-header {
-    background-color:#9f2063;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    padding: 10px;
-    margin: 10px 10px;
+    margin: 10px;
     border-radius: 10px;
     gap: 10px;
-    background-color: #25b27d;
+    
 }
 
-article {
+.flex-header {
+    background-color:#9f2063;
+    order: 0;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #25b27d;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;    
+    order: 0;
+}
+
+.flex-art {
     background-color: #e4195b;
     border-radius: 10px;
+    order: 1;
 }
 
-aside {
+.flex-aside {    
     background-color: #116395;
+    order: 0;
 }
 
-footer {
+.flex-footer {
     background-color: #e06b26;
+    order: 0;
+}
+
+/* Big Size */
+
+@media (min-width : 992px) {
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .flex-header {
+        width: 90%;
+        height: 3rem;
+        order: 0;
+    }
+
+    .flex-aside {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 7rem;
+        order: 1;
+    }*
+
+    .flex-box {
+        width: 69%;
+        height: 7rem;
+        order: 2;
+    }
+
+    .flex-art {
+        width: 90%;
+        height: 2rem;
+    }
+
+    .flex-footer {
+        width: 90%;
+        height: 3rem;
+        order: 3;
+    }
+
 }
